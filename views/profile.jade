@@ -1,0 +1,12 @@
+extends ./layout.jade
+block content
+    h2 #{user.name}
+    
+    hr
+    
+    p #{user.email}
+    
+    p 
+        a(href='/') Home
+    p 
+        a(href='/auth/logout') Logout

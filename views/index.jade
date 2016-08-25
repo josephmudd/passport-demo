@@ -1,0 +1,7 @@
+extends ./layout.jade
+block content
+    if user.name
+        h2 Hello #{user.name}
+        a(href="/profile") See profile
+    else
+        a(href="/auth/login/github") Login
