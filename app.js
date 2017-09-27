@@ -11,6 +11,8 @@ var auth = require('./routes/auth');
 var users = require('./mock/users.json');
 var userArray = Object.keys(users).map(function(value){ return users[value]; });
 
+require('dotenv').config();
+
 passport.use(new GithubStrategy({
     clientID: process.env.GITHUB_CLIENT_ID,
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
